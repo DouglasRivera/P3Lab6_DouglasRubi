@@ -9,27 +9,45 @@ using namespace std;
 int menu();
 
 int main() {
+	vector<String*> cadena;
+	vector<Integer*> integer;
+	vector<Char*> cha;
 	int opcion;
 	while((opcion = menu()) != 10) {
 		switch (opcion) {
 			case 1: {
-				
+				int i;
+				cout << endl << "Integer que desea agregar: " << endl;
+				cin >> i;
+				Integer *in = new Integer(i);
+				integer.push_back(in);
+				cout << endl <<"INTEGER agregado correctamente" << endl;
 				break;
 			}
 			case 2: {
-				
+				char c;
+				cout << endl << "Char que desea agregar: " << endl;
+				cin >> c;
+				Char *charr = new Char(c);
+				cha.push_back(charr);
+				cout << endl <<"Char agregado correctamente" << endl;
 				break;
 			}
 			case 3: {
-				
+				string s;
+				cout << endl << "String que desea agregar: " << endl;
+				cin>>s;
+				String *strin = new String(s);
+				cadena.push_back(strin);
+				cout << endl <<"String agregado correctamente" << endl;
 				break;
 			}
 			case 4: {
-					
+
 				break;
 			}
 			case 5: {
-				    
+
 				break;
 			}
 			case 6: {
@@ -37,24 +55,23 @@ int main() {
 				break;
 			}
 			case 7: {
-				    
+
 				break;
 			}
 			case 8: {
-				
+
 				break;
 			}
 			case 9: {
-				
-
+			
 				break;
 			}
 			case 10: {
 				cout<< "Saliendo del programa...."<<endl;
-				
+
 				break;
 			}
-			
+
 		}//fin del switch
 	}//fin while menu
 	return 0;

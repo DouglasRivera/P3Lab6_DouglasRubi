@@ -2,7 +2,7 @@
 #define STRING_H
 #include <iostream>
 #include <string>
-
+#include "Integer.h"
 
 using namespace std;
 
@@ -11,6 +11,8 @@ class String{
     string cadena;
 
 public:
+	String();
+	String(string cadenaRecibida);
     string getString();
     void operator<<(String cadenaRecibida);
     void operator<<(string cadenaRecibida);

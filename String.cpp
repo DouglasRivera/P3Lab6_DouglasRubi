@@ -1,5 +1,12 @@
 #include "String.h"
 
+String::String(){
+}
+
+String::String(string cadenaRecibida){
+        cadena = cadenaRecibida;
+}
+
 string String::getString(){
         return cadena;
 }
