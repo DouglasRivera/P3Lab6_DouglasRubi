@@ -8,6 +8,48 @@ using namespace std;
 
 int menu();
 
+void ListarNumeros(vector<Integer*> ListarNum){
+	for(int i=0; i<ListarNum.size();i++){
+		cout<<i<<"->";
+		!*ListarNum[i];
+		cout<<endl;
+	}
+}
+void ListarChars(vector<Char*> ListarChar){
+	for(int i=0; i<ListarChar.size();i++){
+		cout<<i<<"->";
+		!*ListarChar[i];
+		cout<<endl;
+	}
+}
+void ListarCadenas(vector<String*> ListarCad){
+	for(int i=0; i<ListarCad.size();i++){
+		cout<<i<<"->";
+		!*ListarCad[i];
+		cout<<endl;
+	}
+}
+void MemoriaNumeros(vector<Integer*>& Numeros){
+	for(int i=0; i<Numeros.size();i++){
+		if(Numeros[i] !=NULL){
+		delete Numeros[i];	
+		}
+	}
+}
+void MemoriaChars(vector<Integer*>& Chars){
+	for(int i=0; i<Chars.size();i++){
+		if(Chars[i] !=NULL){
+		delete Chars[i];	
+		}
+	}
+}
+void MemoriaCad(vector<Integer*>& Cadenas){
+	for(int i=0; i<Cadenas.size();i++){
+		if(Cadenas[i] !=NULL){
+		delete Cadenas[i];	
+		}
+	}
+}
 int main() {
 	vector<String*> cadena;
 	vector<Integer*> integer;
@@ -43,19 +85,43 @@ int main() {
 				break;
 			}
 			case 4: {
-
+				int a;
+				int b;
+				ListarNumeros(integer);
+				cout <<"Seleccionar los indices de los numeros: " << endl;
+				cin>>a;
+				cin>>b;
+				*integer[a] + *integer[b];
 				break;
 			}
 			case 5: {
-
+				int a;
+				int b;
+				ListarNumeros(integer);
+				cout <<"Seleccionar los indices de los numeros: " << endl;
+				cin>>a;
+				cin>>b;
+				*integer[a] - *integer[b];
 				break;
 			}
 			case 6: {
-
+				int a;
+				int b;
+				ListarNumeros(integer);
+				cout <<"Seleccionar los indices de los numeros: " << endl;
+				cin>>a;
+				cin>>b;
+				*integer[a] * *integer[b];
 				break;
 			}
 			case 7: {
-
+				int a;
+				int b;
+				ListarNumeros(integer);
+				cout <<"Seleccionar los indices de los numeros: " << endl;
+				cin>>a;
+				cin>>b;
+				*integer[a] / *integer[b];
 				break;
 			}
 			case 8: {
@@ -63,7 +129,14 @@ int main() {
 				break;
 			}
 			case 9: {
-			
+			    int a;
+				int b;
+				ListarChars(cha);
+				cout <<"Seleccionar los indices de los chars: " << endl;
+				cin>>a;
+				cin>>b;
+			    String result = *cha[a] + *cha[b];
+			    cout <<result.getString() << endl;
 				break;
 			}
 			case 10: {
